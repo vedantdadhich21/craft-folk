@@ -7,11 +7,8 @@ import { Progress } from "@/components/ui/progress";
 export default function Home() {
  return(
   <div className="p-3">
-
-    <Button variant="elevated" className="border-4" > IM Batman</Button>
-    <Progress value="50.5"></Progress>
+    <Button variant="elevated" > IM Batman</Button>
     <Input placeholder="IM THE MUSIC"></Input>
-
   </div>
  );
-}
+};

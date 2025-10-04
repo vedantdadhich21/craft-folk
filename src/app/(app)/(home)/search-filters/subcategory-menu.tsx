@@ -12,9 +12,10 @@ export const SubcategoryMenu = ({
     isOpen,
     position,
 }: Props) =>{
-    if (!isOpen || !category.subcategories?.docs || category.subcategories.docs.length === 0) {
-    return null;
-}
+ 
+if (!isOpen || !category.subcategories || category.subcategories.length === 0) { return null;}
+
+
     const backgroundColor = category.color ||  "#F5F5F5";
 
     return(
@@ -34,7 +35,7 @@ export const SubcategoryMenu = ({
                  
            
             <div>
-                {(category.subcategories?.docs as Category[])?.map((subcategory : Category)=> (
+                {(category.subcategories as Category[])?.map((subcategory : Category)=> (
                         <Link
                          key={subcategory.slug} 
                          href="/"
